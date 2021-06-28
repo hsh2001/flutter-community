@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/provider/user_provider.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
-import 'provider/count_provider.dart';
-import 'widget/home_screen.dart';
-import 'widget/test_screen.dart';
+import 'provider/bottom_nav_provider.dart';
+import 'screen/home_screen.dart';
+import 'screen/test_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => CountProvider()),
+        ChangeNotifierProvider(create: (context) => BottomNavProvider()),
+        ChangeNotifierProvider(create: (context) => UserProvider()),
       ],
       child: GetMaterialApp(
         title: 'Hello flutter',
