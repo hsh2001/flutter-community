@@ -1,0 +1,2 @@
+- Set `name` in `pubspec.yaml`
+- Redesign `HomeScreen` widget.
