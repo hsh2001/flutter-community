@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'provider/bottom_nav_provider.dart';
 import 'screen/home_screen.dart';
+import 'screen/login_screen.dart';
 import 'screen/test_screen.dart';
 
 void main() => runApp(const MyApp());
@@ -21,12 +22,15 @@ class MyApp extends StatelessWidget {
       ],
       child: GetMaterialApp(
         title: 'Hello flutter',
-        theme: ThemeData(primaryColor: Colors.blue),
         home: const HomeScreen(),
         getPages: [
           GetPage(
             name: '/test',
             page: () => const TestScreen(),
+          ),
+          GetPage(
+            name: '/login',
+            page: () => const LoginScreen(),
           ),
         ],
       ),
